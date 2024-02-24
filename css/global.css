@@ -1,0 +1,64 @@
+html, body {
+	font-family: 'Roboto', sans-serif;
+	color: #FFF;
+	background: #141C24;
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1357px;
+	padding: 0 15px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.subtitle {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	color: #57D6FF;
+	font-weight: 300;
+	line-height: 28.8px;
+	margin-bottom: 15px;
+}
+
+.subtitle span {
+	display: block;
+	width: 50px;
+	height: 1px;
+	background: #57D6FF;
+}
+
+.title {
+	font-family: "Aire Exterior", sans-serif;
+	color: #FFF;
+	font-size: 39px;
+	line-height: 39px;
+}
+
+.text {
+	color: #ABABAB;
+	font-size: 21.33px;
+	font-weight: 300;
+	line-height: 31.99px;
+}
+
+.link {
+	color: #00C5FF;
+	font-weight: 500;
+	line-height: 18.75px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #00C5FF;
+	transition: all .3s;
+}
+
+.link:hover {
+	color: #FFF;
+	border-bottom-color: #FFF;
+}

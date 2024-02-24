@@ -1,0 +1,124 @@
+.tariffs__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 77px 0 195px;
+	border-left: 1px solid #FFFFFF26
+}
+
+.tariffs__title {
+	margin-bottom: 80px;
+}
+
+.tariffs__list {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 35px 10px;
+}
+
+.tariffs__list-item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	height: 543px;
+	padding: 75px 45px 50px;
+	background: #1F2631;
+	border-radius: 5px;
+	box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.tariffs__list-title {
+	max-width: 300px;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 42.19px;
+	margin-bottom: 20px;
+}
+
+.tariffs__list-price {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28.13px;
+	margin-bottom: 25px;
+}
+
+.tariffs__list-features {
+	color: #ABABAB;
+	font-size: 21.33px;
+	font-weight: 300;
+	line-height: 31.99px;
+}
+
+.tariffs__list-btn {
+	font-family: "Aire Exterior", sans-serif;
+	display: inline-block;
+	width: 100%;
+	color: #141C24;
+	font-size: 24px;
+	line-height: 43.2px;
+	text-align: center;
+	padding: 13px 0;
+	background: #00C5FF;
+	border-radius: 5px;
+	margin-top: auto;
+	transition: all .2s;
+}
+
+.tariffs__list-btn:hover {
+	background: #FFFFFF;
+}
+
+.tariffs__hr {
+	width: 100%;
+	max-width: 582px;
+	border: 1px solid #00C5FF;
+	margin-top: 90px;
+}
+
+.tariffs__list-item--maximum {
+	color: #141C24;
+	background: #00C5FF;
+}
+
+.tariffs__list-item--maximum .tariffs__list-features {
+	color: #000000;
+}
+
+.tariffs__list-item--maximum .tariffs__list-btn {
+	color: #F1F8FF;
+	background: #141C24;
+}
+
+.tariffs__list-item--maximum .tariffs__list-btn:hover {
+	background: #1F2631;
+}
+
+
+@media (max-width: 1024px) {
+	.tariffs__inner {
+		padding-bottom: 90px;
+		border: none;
+	}
+
+	.tariffs__hr {
+		display: none;
+	}
+}
+
+@media (max-width: 425px) {
+	.tariffs__inner {
+		padding: 50px 0 0;
+	}
+
+	.tariffs__title {
+		margin-bottom: 60px;
+	}
+
+	.tariffs__list-item {
+		padding: 75px 25px 50px;
+	}
+}

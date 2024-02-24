@@ -1,0 +1,170 @@
+.header {
+	position: absolute;
+	width: 100%;
+	padding: 47px 0;
+	background: #141C24;
+	z-index: 10;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 55px;
+}
+
+.header__logo-mobile {
+	display: none;
+}
+
+.header__nav-list {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+.header__nav-link {
+	font-weight: 300;
+	line-height: 28.8px;
+	white-space: nowrap;
+	transition: .3s;
+}
+
+.header__nav-link:after {
+	background-color: #00C5FF;
+	display: block;
+	content: "";
+	height: 2px;
+	width: 0%;
+	-webkit-transition: width .3s ease-in-out;
+	-moz--transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+}
+
+.header__nav-link:hover {
+	color: #00C5FF;
+}
+
+.header__nav-link:hover:after,
+.header__nav-link:focus:after {
+   width: 100%;
+}
+
+.header__menu-box {
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header__socials {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	margin-bottom: 40px;
+}
+
+.header__menu-box img {
+	transition: .3s;
+}
+
+.header__socials-link:hover img,
+.header__menu-close:hover img
+ {
+	transform: scale(1.1);
+}
+
+
+.header__hr {
+	width: 100%;
+	border: 1px solid #FFF;
+	margin-bottom: 25px;
+}
+
+.header__menu-close {
+	padding: 0px 20px;
+}
+
+
+.header__burger-btn {
+	display: none;
+	flex-direction: column;
+	gap: 8px;
+	transition: all .3s;
+}
+
+.header__burger-btn:hover {
+	gap: 15px;
+}
+
+.header__burger-line {
+	width: 45px;
+	height: 5px;
+	background: #EAE5E5;
+}
+
+
+@media (max-width: 1200px) {
+	.header {
+		background: transparent;
+	}
+
+	.header__logo {
+		filter: brightness(0) invert(1);
+	}
+
+	.header__menu {
+		position: fixed;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 50px 30px;
+		background: #141C24;
+		z-index: 10;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s, visibility .3s;
+	}
+
+	.header__menu-active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.header__menu-active .header__logo-mobile {
+		display: block;
+	}
+
+	.header__menu-active .header__menu-box {
+		display: flex;
+	}
+
+	.header__nav-list {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.header__burger-btn {
+		display: flex;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding: 40px 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.header__inner {
+		justify-content: center;
+	}
+
+	.header__burger-btn {
+		position: fixed;
+		top: 730px; 
+		right: 15px;
+	}
+}

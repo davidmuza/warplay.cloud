@@ -1,0 +1,64 @@
+.location {
+	padding: 35px 0 80px;
+}
+
+.location__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.location__subtitle {
+	margin-bottom: 5px;
+}
+
+.location__title {
+	margin-bottom: 30px;
+}
+
+.location__map {
+	position: relative;
+}
+
+.location__mark {
+	position: absolute;
+	left: 27%;
+	bottom: 10%;
+}
+
+.location__mark-cursor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 30px;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.location__mark-label {
+	position: absolute;
+	left: 120%;
+	bottom: 110%;
+	font-family: "Aire Exterior", sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	opacity: 0;
+	transition: .3s;
+}
+
+.location__mark-label::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -5px;
+	width: 127px;
+	height: 1px;
+	transform-origin: bottom left;
+	transform: rotate(145deg);
+	background: #FFF;
+}
+
+.location__mark-cursor:hover+.location__mark-label {
+	opacity: 1;
+}

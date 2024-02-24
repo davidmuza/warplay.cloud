@@ -1,0 +1,153 @@
+.hero {
+	padding-bottom: 100px;
+}
+
+.hero .container {
+	max-width: 1327px;
+	padding: 0;
+}
+
+.hero__inner {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 165px;
+	width: 100%;
+	height: 777px;
+	background: url('../images/banner.png') no-repeat;
+	background-position: center;
+	border: 0.5px solid #57D6FF;
+	border-radius: 0 0 15px 15px;
+	box-shadow: -33px 17px 29px 0px #00000040;
+	z-index: 1;
+}
+
+.hero__subtitle {
+	font-weight: 500;
+	line-height: 18.75px;
+}
+
+.hero__title {
+	font-family: "Aire Exterior", sans-serif;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.hero__btn {
+	font-family: "Aire Exterior", sans-serif;
+	display: inline-block;
+	color: #000;
+	font-size: 24px;
+	line-height: 24px;
+	padding: 20px 90px;
+	background: #FFF;
+	clip-path: polygon(20% 0%, 92% 0%, 100% 35%, 100% 100%, 80% 100%, 0 100%, 0% 80%, 0 0);
+	transition: .3s;
+}
+
+.hero__btn:hover {
+	background: #00C5FF;
+	transition: .3s;
+}
+
+.hero__line {
+	position: absolute;
+	width: 1px;
+	overflow: hidden;
+}
+
+.hero__line::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150%;
+	background: #FFFFFF;
+}
+
+.hero__line-top {
+	top: 150px;
+	left: 50%;
+	height: 77px;
+}
+
+.hero__line-top::after {
+	animation: move-down 5s linear infinite;
+}
+
+.hero__line-bottom {
+	left: 50%;
+	bottom: -100px;
+	height: 132px;
+	transform: rotate(180deg);
+}
+
+.hero__line-bottom::after {
+	animation: move-down 7s linear infinite;
+}
+
+.hero__line-right {
+	display: none;
+	right: 67px;
+	bottom: 47px;
+	height: 78%;
+}
+
+.hero__line-right::after {
+	animation: move-down 15s linear infinite;
+}	
+
+@keyframes move-down {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.hero__inner::before {
+		top: 15px;
+	}
+
+	.hero__line-right {
+		display: block;
+	}
+}
+
+@media (max-width: 900px) {
+	.hero__line-top, .hero__line-right {
+		display: none;
+	}
+}
+
+@media (max-width: 425px) {
+	.hero__inner {
+		padding: 0 38px 100px;
+	}
+
+	.hero__subtitle {
+		max-width: 150px;
+		text-align: left;
+		align-self: flex-start;
+		margin-bottom: 5px;
+	}
+
+	.hero__title {
+		text-align: left;
+		margin-bottom: 140px;
+	}
+
+	.hero__line-bottom {
+		bottom: 0;
+		transform: rotate(180deg) translateY(-50%);
+	}
+}
